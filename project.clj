@@ -1,6 +1,6 @@
-(defproject damionjunk/nlp "0.1.0"
+(defproject damionjunk/nlp "0.2.0"
   :description "Code examples using Stanford CoreNLP"
-  :url "http://damionjunk.com"
+  :url "https://github.com/damionjunk/damionjunk.nlp"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :jvm-opts ["-Xmx1024m" "-server"]
