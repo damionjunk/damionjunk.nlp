@@ -19,7 +19,7 @@ For convenience, this library is available on Clojars:
 [![Clojars Project](http://clojars.org/damionjunk/nlp/latest-version.svg)]
 
 ```
-[damionjunk/nlp  "0.2.0"]
+[damionjunk/nlp  "0.3.0"]
 ```
 
 This library is using Stanford's CoreNLP version `3.5.2`, which *requires* the Java `1.8` runtime.
