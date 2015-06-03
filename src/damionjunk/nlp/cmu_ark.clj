@@ -16,7 +16,7 @@
 (defn tag
   "Given the input `text`, return a sequence of maps of the form:
 
-   {:token \"sometoken\" :tag \"T\"}
+   {:token \"sometoken\" :pos \"T\"}
 
    For a list of tags, see:
    https://github.com/brendano/ark-tweet-nlp/blob/master/docs/annot_guidelines.pdf
@@ -57,6 +57,6 @@
     Y – X + verbal"
   [text]
   (when (nil? @tagger) (initalize))
-  (map (fn [tt] {:token (.token tt) :tag (.tag tt)}) (.tokenizeAndTag @tagger text)))
+  (map (fn [tt] {:token (.token tt) :pos (.tag tt)}) (.tokenizeAndTag @tagger text)))
 
 

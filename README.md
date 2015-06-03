@@ -38,11 +38,11 @@ Parts of speech with CMU's Ark Tweet:
 
 (ark/tag "ikr? u r my best friend. :) LOL amirite? #funzone")
 ;;=>
-({:token "ikr", :tag "!"} {:token "?", :tag ","} {:token "u", :tag "O"}
- {:token "r", :tag "V"} {:token "my", :tag "D"} {:token "best", :tag "A"}
- {:token "friend", :tag "N"} {:token ".", :tag ","} {:token ":)", :tag "E"}
- {:token "LOL", :tag "!"} {:token "amirite", :tag "!"} {:token "?", :tag ","}
- {:token "#funzone", :tag "#"})
+({:token "ikr", :pos "!"} {:token "?", :pos ","} {:token "u", :pos "O"}
+ {:token "r", :pos "V"} {:token "my", :pos "D"} {:token "best", :pos "A"}
+ {:token "friend", :pos "N"} {:token ".", :pos ","} {:token ":)", :pos "E"}
+ {:token "LOL", :pos "!"} {:token "amirite", :pos "!"} {:token "?", :pos ","}
+ {:token "#funzone", :pos "#"})
 ```
 
 ### CoreNLP Sentiment Annotator
