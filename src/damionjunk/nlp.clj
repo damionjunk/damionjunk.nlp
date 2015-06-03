@@ -1,9 +1,28 @@
 (ns damionjunk.nlp
-  (:require [damionjunk.nlp.stanford :as nlp]))
+  (:require [damionjunk.nlp.stanford :as nlp]
+            [damionjunk.nlp.cmu-ark  :as ark]))
 
 ;; Nothing here but some examples for now.
 
 (comment
+
+  ;; This example uses CMU's ark-tweet-nlp to give us a more accurate POS tagging:
+  (ark/tag "ikr? u r my best friend. :) LOL amirite? #funzone")
+
+  ;; =>
+  ;; ({:token "ikr", :tag "!"}
+  ;;  {:token "?", :tag ","}
+  ;;  {:token "u", :tag "O"}
+  ;;  {:token "r", :tag "V"}
+  ;;  {:token "my", :tag "D"}
+  ;;  {:token "best", :tag "A"}
+  ;;  {:token "friend", :tag "N"}
+  ;;  {:token ".", :tag ","}
+  ;;  {:token ":)", :tag "E"}
+  ;;  {:token "LOL", :tag "!"}
+  ;;  {:token "amirite", :tag "!"}
+  ;;  {:token "?", :tag ","}
+  ;;  {:token "#funzone", :tag "#"})
 
 
   (nlp/sentiment-maps "I'm not sure if I like the movie. I'm quite certain I do not like the movie. I really loved the movie, it was great.")

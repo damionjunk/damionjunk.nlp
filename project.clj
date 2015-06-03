@@ -7,4 +7,5 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [edu.stanford.nlp/stanford-corenlp "3.5.2"]
                  [edu.stanford.nlp/stanford-corenlp "3.5.2" :classifier "models"]
+                 [edu.cmu.cs/ark-tweet-nlp "0.3.2"]
                  ])
