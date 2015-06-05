@@ -1,4 +1,4 @@
-(defproject damionjunk/nlp "0.3.0-SNAPSHOT"
+(defproject damionjunk/nlp "0.3.0"
   :description "Code examples using Stanford CoreNLP"
   :url "https://github.com/damionjunk/damionjunk.nlp"
   :license {:name "Eclipse Public License"
