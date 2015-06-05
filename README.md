@@ -1,12 +1,16 @@
 # damionjunk.nlp
 
 This library is a launching point for playing around with the [Stanford Core NLP](http://nlp.stanford.edu/software/corenlp.shtml) package in Clojure.
+As of version 0.3.0, [CMU's ark-tweet-nlp](http://www.ark.cs.cmu.edu/TweetNLP/) was added.
 
 ## Implemented Features
 
 CoreNLP has a lot of functionality that I don't use, and didn't implement.
 I'm primarily interested in the parts of speech, sentiment, and named entity annotations.
 I'll add other functionality as the need arises, or a request is made.
+
+POS tagging with CMU's [ark-tweet-nlp](https://github.com/brendano/ark-tweet-nlp/) is implemented.
+Models can be substituted with an explicit call to `(damionjunk.nlp.cmu-ark/initialize :model "modelname")`.
 
 ## Dependency Information
 
@@ -15,14 +19,31 @@ For convenience, this library is available on Clojars:
 [![Clojars Project](http://clojars.org/damionjunk/nlp/latest-version.svg)]
 
 ```
-[damionjunk/nlp  "0.2.0"]
+[damionjunk/nlp  "0.3.0"]
 ```
 
 This library is using Stanford's CoreNLP version `3.5.2`, which *requires* the Java `1.8` runtime.
 See the [CoreNLP History](http://nlp.stanford.edu/software/corenlp.shtml#history) for more details.
 Version `3.4.1` of the CoreNLP was the last to support Java `1.6` and `1.7`.
+Carnegie Mellon's Ark Tweet NLP library is at version `0.3.2`.
 
 ## Code Examples
+
+### CMU ark-tweet-nlp
+
+Parts of speech with CMU's Ark Tweet:
+
+```clojure
+(require '[damionjunk.nlp.cmu-ark :as ark])
+
+(ark/tag "ikr? u r my best friend. :) LOL amirite? #funzone")
+;;=>
+({:token "ikr", :pos "!"} {:token "?", :pos ","} {:token "u", :pos "O"}
+ {:token "r", :pos "V"} {:token "my", :pos "D"} {:token "best", :pos "A"}
+ {:token "friend", :pos "N"} {:token ".", :pos ","} {:token ":)", :pos "E"}
+ {:token "LOL", :pos "!"} {:token "amirite", :pos "!"} {:token "?", :pos ","}
+ {:token "#funzone", :pos "#"})
+```
 
 ### CoreNLP Sentiment Annotator
 
